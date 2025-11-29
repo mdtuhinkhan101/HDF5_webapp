@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web App</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+        }
+        .wrapper {
+            max-width: 450px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .btn-custom {
+            width: 100%;
+            background: #4a6cf7;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: #2743d8;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        .result {
+            background: #e9ecef;
+            padding: 12px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h3 class="title">AI Prediction Web App</h3>
+
+        <form action="/predict" method="POST">
+    <label>Feature 1</label>
+    <input type="text" name="f1" class="form-control mb-3" required>
+
+    <label>Feature 2</label>
+    <input type="text" name="f2" class="form-control mb-3" required>
+
+    <label>Feature 3</label>
+    <input type="text" name="f3" class="form-control mb-3" required>
+
+    <label>Feature 4</label>
+    <input type="text" name="f4" class="form-control mb-3" required>
+
+    <label>Feature 5</label>
+    <input type="text" name="f5" class="form-control mb-3" required>
+
+    <label>Feature 6</label>
+    <input type="text" name="f6" class="form-control mb-3" required>
+
+    <label>Feature 7</label>
+    <input type="text" name="f7" class="form-control mb-3" required>
+
+    <label>Feature 8</label>
+    <input type="text" name="f8" class="form-control mb-3" required>
+
+    <button type="submit" class="btn-custom">Predict</button>
+</form>
+
+        {% if prediction %}
+        <div class="result">
+            Prediction: {{ prediction }}
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
